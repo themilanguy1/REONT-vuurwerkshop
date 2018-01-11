@@ -16,39 +16,74 @@ body {
     padding: 10px;
     border: 3px solid black;
     border-radius: 10px;
-    width: 5%;
+    width: 100px;
     color: black;
     font-size: 15px;
+    margin: 0.3em;
+    float: left;
 }
 
 #home:hover {
     background-color: rgb(123, 62, 223);
 }
 
+#contact:hover {
+    background-color: rgb(123, 62, 223);
+}
+
+#titel {
+    font-size: 40px;
+    margin: 1em;
+    text-align: center;
+}
+
+#contact {
+        display: block;
+    padding: 10px;
+    border: 3px solid black;
+    border-radius: 10px;
+    width: 100px;
+    color: black;
+    font-size: 15px;
+    margin: 0.3em;
+    float: right;
+} 
+
+
 .assortiment {
     background-color: lightblue;
     display: block;
-    margin: 1em 2em 1em 2em;
-    padding: 1em;
+
 }
 
 .productenlijst {
     background-color: rgb(173, 183, 230);
     display: block;
-    margin: 1em;
-    padding: 1em;
+
 }
 
 .winkelwagen {
     background-color: grey;
     display: block;
-    margin: 1em;
-    padding: 1em;
 }
 
 .footer {
-    background-color: blue;
+    background-color: rgb(162, 162, 247);
     display: block;
-    margin: 1em;
-    padding: 1em;
+    padding: 0.5em;
+    margin: 1em calc(5%) 1.5em calc(5%);
+    border-bottom: 5px solid lightblue;
+    border-radius: 10px;
+}
+
+@media (max-width: 575.99px) {
+    #home {
+        display: block;
+        padding: 10px;
+        width: 50px;
+        font-size: 10px;
+    }
+    #titel {
+        font-size: 25px;
+    }
 }

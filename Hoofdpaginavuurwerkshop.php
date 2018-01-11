@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Vuurwerkshop</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="stylesheetvuurwerkshop.css">
 
     <link rel="apple-touch-icon" sizes="57x57" href="https://www.ictacademie.info/milangupta/favicon/apple-icon-57x57.png">
@@ -28,27 +29,35 @@
 
 </head>
 <body>
-    <div class="container">
-        <div class="navigatie">
-            <a id="home" href="https://www.google.com">Home</a>
+    <div class="navigatie">
+        <div>
+            <a class="text-center" id="home" href="https://www.google.com">Home</a>
+            <h2 id="titel" class="text-center">  Vuurwerkshop</h2>
+            <a class="text-center" id="contact" href="https://www.twitter.com">Contact</a>
         </div>
+    </div>
+    <div class="container">
         <div class="row">
-            <div class="assortiment" class="col-md-4">
-                <h1>Assortiment keuze</h1>
+            <div class="assortiment col-md-2">
+                <h3>Assortiment keuze</h3>
+                <input type="radio" name="Assortiment" value="Compleet">Compleet assortiment<br>
+                <input type="radio" name="Assortiment" value="knalvuurwerk">Knalvuurwerk<br>
+                <input type="radio" name="Assortiment" value="siervuurwerk">Siervuurwerk<br>
             </div>
+            <div class="productenlijst col-md-8">
+                <h3>Productenlijst</h3>
+                <?php
+                ?>
 
-            <div class="productenlijst" class="col-md-4">
-                <h1>Productenlijst</h1>
             </div>
-
-            <div class="winkelwagen" class="col-md-8">
-                <h1>Winkelwagen</h1>
+            <div class="winkelwagen col-md-2">
+                <h3>Winkelwagen</h3>
             </div>
         </div>
     </div>
-
-    test321
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+        <div class="footer"> 
+            <p>contact: email, nummer</p>
+        </div>
 </body>
 </html>
 
