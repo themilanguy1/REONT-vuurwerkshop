@@ -40,19 +40,19 @@
     <div class="container">
         <div class="row">
             <div class="assortiment col-md-2">
-                <h3>Assortiment keuze</h3>
+                <h4 class="text-center" id="assortiment-titel">Assortiment keuze</h4>
                 <input type="radio" name="Assortiment" value="Compleet">Compleet assortiment<br>
                 <input type="radio" name="Assortiment" value="knalvuurwerk">Knalvuurwerk<br>
                 <input type="radio" name="Assortiment" value="siervuurwerk">Siervuurwerk<br>
             </div>
-            <div class="productenlijst col-md-8">
-                <h3>Productenlijst</h3>
+            <div class="productenlijst col-md-7 ">
+                <h4 class="text-center" id="productenlijst-titel">Productenlijst</h4>
                 <?php
                 ?>
 
             </div>
-            <div class="winkelwagen col-md-2">
-                <h3>Winkelwagen</h3>
+            <div class="winkelwagen col-md-2 ">
+                <h4 class="text-center" id="winkelwagen-titel">Winkelwagen</h4>
             </div>
         </div>
     </div>
