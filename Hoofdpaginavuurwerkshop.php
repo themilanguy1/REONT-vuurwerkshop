@@ -48,6 +48,12 @@
             <div class="productenlijst col-md-7 ">
                 <h4 class="text-center" id="productenlijst-titel">Productenlijst</h4>
                 <hr>
+                <div>
+                product 1
+                </div>
+                <div>
+                product 2
+                </div>
                 <?php
                 ?>
 
