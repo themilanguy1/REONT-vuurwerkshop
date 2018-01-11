@@ -47,14 +47,18 @@
             </div>
             <div class="productenlijst col-md-7 ">
                 <h4 class="text-center" id="productenlijst-titel">Productenlijst</h4>
+                <hr>
                 <?php
                 ?>
 
             </div>
             <div class="winkelwagen col-md-2 ">
                 <h4 class="text-center" id="winkelwagen-titel">Winkelwagen</h4>
+                <hr>
+                winkelwagen content
             </div>
         </div>
+        <hr>
     </div>
         <div class="footer"> 
             <p><strong>Email: </strong>vuurwerkshop3@gmail.com</p>
