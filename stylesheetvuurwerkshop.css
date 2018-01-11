@@ -36,7 +36,6 @@ body {
 
 #titel {
     font-size: 40px;
-    margin: 0.3em;
 }
 
 #contact {
@@ -52,21 +51,18 @@ body {
 } 
 
 .assortiment {
-    background-color: lightblue;
     display: block;
     padding: 0.5em 0.5em 200px 0.5em;
     margin: 0.5em;
 }
 
 .productenlijst {
-    background-color: rgb(173, 183, 230);
     display: block;
     padding: 0.5em 0.5em 200px 0.5em;
     margin: 0.5em;
 }
 
 .winkelwagen {
-    background-color: grey;
     display: block;
     padding: 0.5em 0.5em 200px 0.5em;
     margin: 0.5em;

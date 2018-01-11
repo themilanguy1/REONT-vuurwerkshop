@@ -26,7 +26,6 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-
 </head>
 <body>
     <div class="navigatie">
@@ -41,6 +40,7 @@
         <div class="row">
             <div class="assortiment col-md-2">
                 <h4 class="text-center" id="assortiment-titel">Assortiment keuze</h4>
+                <hr>
                 <input type="radio" name="Assortiment" value="Compleet">Compleet assortiment<br>
                 <input type="radio" name="Assortiment" value="knalvuurwerk">Knalvuurwerk<br>
                 <input type="radio" name="Assortiment" value="siervuurwerk">Siervuurwerk<br>
@@ -57,7 +57,8 @@
         </div>
     </div>
         <div class="footer"> 
-            <p>contact: email, nummer</p>
+            <p><strong>Email: </strong>vuurwerkshop3@gmail.com</p>
+            <p><strong>Telefoon: </strong>010-4675538</p>
         </div>
 </body>
 </html>
