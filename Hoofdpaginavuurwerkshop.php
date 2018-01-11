@@ -28,24 +28,26 @@
 
 </head>
 <body>
-    <div class="navigatie">
-        <a id="home" href="https://www.google.com">Home</a>
-    </div>
     <div class="container">
+        <div class="navigatie">
+            <a id="home" href="https://www.google.com">Home</a>
+        </div>
         <div class="row">
-            <div class="assortiment">
+            <div class="assortiment" class="col-md-4">
                 <h1>Assortiment keuze</h1>
             </div>
 
-            <div class="productenlijst">
+            <div class="productenlijst" class="col-md-4">
                 <h1>Productenlijst</h1>
             </div>
 
-            <div class="winkelwagen">
+            <div class="winkelwagen" class="col-md-8">
                 <h1>Winkelwagen</h1>
             </div>
         </div>
     </div>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 </body>
 </html>
 
