@@ -7,7 +7,7 @@ body {
 
 .navigatie {
     display: block;
-    margin: 1em calc(10%) 1.5em calc(10%);
+    margin: 1em calc(15%) 1.5em calc(15%);
     padding: 1em;
     border-top: 5px solid rgb(227, 248, 255);
     border-radius: 10px;
@@ -70,9 +70,17 @@ body {
 .footer {
     display: block;
     padding: 0.5em;
-    margin: 1em calc(10%) 1.5em calc(10%);
+    margin: 1em calc(15%) 1.5em calc(15%);
     border-bottom: 5px solid lightblue;
     border-radius: 10px;
+}
+
+#adres {
+    float: right;
+}
+
+#routebeschrijving {
+    float: right;
 }
 
 @media (max-width: 800px) {

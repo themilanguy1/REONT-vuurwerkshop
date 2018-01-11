@@ -30,8 +30,8 @@
 <body>
     <div class="navigatie">
         <div>
-            <a class="text-center" id="home" href="https://www.google.com">Home</a>
-            <a class="text-center" id="contact" href="https://www.twitter.com">Contact</a>
+            <a class="text-center" id="home" href="https://www.example.com">Home</a>
+            <a class="text-center" id="contact" href="https://www.example.com">Contact</a>
             <h2 class="text-center" id="titel">  Vuurwerkshop</h2>
             
         </div>
@@ -39,7 +39,7 @@
     <div class="container">
         <div class="row">
             <div class="assortiment col-md-2">
-                <h4 class="text-center" id="assortiment-titel">Assortiment keuze</h4>
+                <h4 class="text-center" id="assortiment-titel">Categorie</h4>
                 <hr>
                 <input type="radio" name="Assortiment" value="Compleet">Compleet assortiment<br>
                 <input type="radio" name="Assortiment" value="knalvuurwerk">Knalvuurwerk<br>
@@ -61,8 +61,12 @@
         <hr>
     </div>
         <div class="footer"> 
+            <p id="adres"><strong>Adres: </strong>Stolwijkstraat 8</p>
             <p><strong>Email: </strong>vuurwerkshop3@gmail.com</p>
+            <a id="routebeschrijving" href="https://www.example.com"><strong>Routebeschrijving</strong></a>
             <p><strong>Telefoon: </strong>010-4675538</p>
+
+
         </div>
 </body>
 </html>
