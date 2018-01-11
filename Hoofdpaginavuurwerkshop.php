@@ -30,14 +30,14 @@
 <body>
     <div class="navigatie">
         <div>
-            <a class="text-center" id="home" href="https://www.example.com"><strong>Home</strong></a>
+            <a class="text-center" id="home" href="https://www.example.com">Home</a>
             <a class="text-center" id="contact" href="https://www.example.com">Contact</a>
             <h2 class="text-center" id="titel">  Vuurwerkshop</h2>
             
         </div>
     </div>
     <div class="container">
-        <div class="row">
+        <div class="row text-center">
             <div class="assortiment col-md-2">
                 <h4 class="text-center" id="assortiment-titel">Categorie</h4>
                 <hr>

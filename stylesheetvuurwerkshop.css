@@ -7,7 +7,7 @@ body {
 
 .navigatie {
     display: block;
-    margin: 1em calc(15%) 1.5em calc(15%);
+    margin: 1em calc(12%) 1.5em calc(12%);
     padding: 1em;
     border-top: 5px solid rgb(227, 248, 255);
     border-radius: 10px;
@@ -15,9 +15,9 @@ body {
 
 #home {
     padding: 0.3em;
-    border: 3px solid black;
+    border: 1.5px solid rgba(129, 135, 226, 0.568);
     border-radius: 10px;
-    width: 100px;
+    width: 80px;
     color: black;
     font-size: 15px;
     margin: 0.3em;
@@ -25,27 +25,31 @@ body {
 }
 
 #home:hover {
-    background-color: rgb(123, 62, 223);
-}
-
-#contact:hover {
-    background-color: rgb(123, 62, 223);
+    background-color: rgba(129, 135, 226, 0.568);
+    text-decoration: none;
 }
 
 #titel {
     font-size: 40px;
+    border-bottom: 2px solid lightblue;
+    border-radius: 5px;
 }
 
 #contact {
     padding: 0.3em;
-    border: 3px solid black;
+    border: 1.5px solid rgba(129, 135, 226, 0.568);
     border-radius: 10px;
-    width: 100px;
+    width: 80px;
     color: black;
     font-size: 15px;
     margin: 0.3em;
     float: right;
 } 
+
+#contact:hover {
+    background-color: rgba(129, 135, 226, 0.568);
+    text-decoration: none;
+}
 
 .assortiment {
     display: block;
@@ -68,7 +72,7 @@ body {
 .footer {
     display: block;
     padding: 0.5em;
-    margin: 1em calc(15%) 1.5em calc(15%);
+    margin: 1em calc(12%) 1.5em calc(12%);
     border-bottom: 5px solid lightblue;
     border-radius: 10px;
 }
@@ -81,7 +85,7 @@ body {
     float: right;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 769px) {
     #home {
         display: block;
         padding: 10px;
@@ -94,6 +98,8 @@ body {
         width: 60px;
         font-size: 10px;
     }
+    .assortiment {
+        padding: 0.5em;
 }
 
 @media (max-width: 995px) {
