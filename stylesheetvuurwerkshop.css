@@ -61,6 +61,13 @@ body {
     margin: 0.5em;
 }
 
+.product {
+    display: inline-block;
+    font-size: 15px;
+    border: 2px solid lightgrey;
+    margin: 0.3em;
+}
+
 .winkelwagen {
     display: block;
     padding: 0.5em 0.5em 200px 0.5em;

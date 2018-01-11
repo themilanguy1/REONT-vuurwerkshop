@@ -49,15 +49,34 @@
             <div class="productenlijst col-md-7 ">
                 <h4 class="text-center" id="productenlijst-titel">Productenlijst</h4>
                 <hr>
-                <div>
-                product 1
-                </div>
-                <div>
-                product 2
-                </div>
+                <div class="row"
                 <?php
-                ?>
+                     $user = 'root';
+                     $pass = '';
+                     $db = 'vuurwerkdatabase';
+                     $db = new mysqli('localhost', $user, $pass, $db) or die("Unable to connect to database");
+                                     
+                     if ($db->connect_error) {
+                          die("Connection failed: " . $db->connect_error);
+                     } 
+                                 
+                     $result = mysqli_query($db, 'SELECT * FROM vuurwerk');
+                    
+                     if ($result->num_rows> 0)
+                     while($row = mysqli_fetch_assoc($result)) {
+                        echo '<div class="product col-md-4">';
+                        echo '<p>' . $row["productnaam"] . '</p>';
+                        echo '</div>';
+                                         }
+                         else 
+                                 echo "Geen producten gevonden";
+                        /*
+                        <tr><td>" . $row["datum"] . "</td><td>" . $row["afspraak"] . "</td><td>" . $row["adres"] . "<td> <a href='deleterow.php?id=" . $row["id"] . "'><img src='https://www.ictacademie.info/milangupta/favicon/trashicon2.ico' title='Remove' alt='remove icon'></img></a></td></tr>
+                        */
 
+
+                ?>
+                </div>
             </div>
             <div class="winkelwagen col-md-2 ">
                 <h4 class="text-center" id="winkelwagen-titel">Winkelwagen</h4>
