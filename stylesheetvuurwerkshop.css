@@ -1,0 +1,54 @@
+body {
+    background-color: white;
+}
+
+.navigatie {
+    background-color: rgba(93, 92, 143, 0.527);
+    display: block;
+    margin: 1em calc(5%) 1.5em calc(5%);
+    padding: 1em;
+    border-top: 5px solid lightblue;
+    border-radius: 10px;
+}
+
+#home {
+    display: block;
+    padding: 10px;
+    border: 3px solid black;
+    border-radius: 10px;
+    width: 5%;
+    color: black;
+    font-size: 15px;
+}
+
+#home:hover {
+    background-color: rgb(123, 62, 223);
+}
+
+.assortiment {
+    background-color: lightblue;
+    display: block;
+    margin: 1em 2em 1em 2em;
+    padding: 1em;
+}
+
+.productenlijst {
+    background-color: rgb(173, 183, 230);
+    display: block;
+    margin: 1em;
+    padding: 1em;
+}
+
+.winkelwagen {
+    background-color: grey;
+    display: block;
+    margin: 1em;
+    padding: 1em;
+}
+
+.footer {
+    background-color: blue;
+    display: block;
+    margin: 1em;
+    padding: 1em;
+}
