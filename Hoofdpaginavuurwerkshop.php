@@ -32,8 +32,9 @@
     <div class="navigatie">
         <div>
             <a class="text-center" id="home" href="https://www.google.com">Home</a>
-            <h2 id="titel" class="text-center">  Vuurwerkshop</h2>
             <a class="text-center" id="contact" href="https://www.twitter.com">Contact</a>
+            <h2 class="text-center" id="titel">  Vuurwerkshop</h2>
+            
         </div>
     </div>
     <div class="container">

@@ -34,11 +34,10 @@ body {
 #titel {
     font-size: 40px;
     margin: 1em;
-    text-align: center;
 }
 
 #contact {
-        display: block;
+    display: block;
     padding: 10px;
     border: 3px solid black;
     border-radius: 10px;
@@ -53,18 +52,22 @@ body {
 .assortiment {
     background-color: lightblue;
     display: block;
-
+    padding: 0.5em;
+    margin: 0.5em;
 }
 
 .productenlijst {
     background-color: rgb(173, 183, 230);
     display: block;
-
+    padding: 0.5em;
+    margin: 0.5em;
 }
 
 .winkelwagen {
     background-color: grey;
     display: block;
+    padding: 0.5em;
+    margin: 0.5em;
 }
 
 .footer {
@@ -78,6 +81,12 @@ body {
 
 @media (max-width: 575.99px) {
     #home {
+        display: block;
+        padding: 10px;
+        width: 50px;
+        font-size: 10px;
+    }
+    #contact {
         display: block;
         padding: 10px;
         width: 50px;
