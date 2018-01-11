@@ -30,7 +30,7 @@
 <body>
     <div class="navigatie">
         <div>
-            <a class="text-center" id="home" href="https://www.example.com">Home</a>
+            <a class="text-center" id="home" href="https://www.example.com"><strong>Home</strong></a>
             <a class="text-center" id="contact" href="https://www.example.com">Contact</a>
             <h2 class="text-center" id="titel">  Vuurwerkshop</h2>
             
@@ -44,6 +44,7 @@
                 <input type="radio" name="Assortiment" value="Compleet">Compleet assortiment<br>
                 <input type="radio" name="Assortiment" value="knalvuurwerk">Knalvuurwerk<br>
                 <input type="radio" name="Assortiment" value="siervuurwerk">Siervuurwerk<br>
+                <input type="radio" name="Assortiment" value="actie">Nieuwjaarsactie<br>
             </div>
             <div class="productenlijst col-md-7 ">
                 <h4 class="text-center" id="productenlijst-titel">Productenlijst</h4>
