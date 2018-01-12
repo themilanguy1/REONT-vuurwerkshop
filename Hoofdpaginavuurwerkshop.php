@@ -75,6 +75,9 @@
                                 echo "<img class='productimage' src='$row[productafbeelding]'>" ;
                                 echo "</div>";
                                 echo "<p><b>$row[productnaam]</b>   &euro;$row[productprijs]</p>";
+                                echo "<div class='overflowpindakaas'>";
+                                echo "<p>$row[productbeschrijving]</p>";
+                                echo "</div>";
                                 echo "</div>";
                                 echo "</div>";
                              }
@@ -83,8 +86,12 @@
                                 echo "<div class='productcontainer'>";
                                 echo "<div class='productimagediv'>";
                                 echo "<img class='productimage' src='$row[productafbeelding]'>" ;
+                                echo "<img class='actie' src='http://www.autobedrijf-jenf.nl/site/wp-content/uploads/2016/03/actie2.png'>";
                                 echo "</div>";
                                 echo "<p><b>$row[productnaam]</b>   &euro;$row[productprijs]</p>";
+                                echo "<div class='overflowpindakaas'>";
+                                echo "<p>$row[productbeschrijving]</p>";
+                                echo "</div>";
                                 echo "</div>";
                                 echo "</div>";
                              }
@@ -95,7 +102,7 @@
                             echo "<img class='productimage' src='$row[productafbeelding]'>" ;
                             echo "</div>";
                             echo "<p><b>$row[productnaam]</b>   &euro;$row[productprijs]</p>";
-                            echo "<div style='text-size-adjust: 70%'>";
+                            echo "<div class='overflowpindakaas'>";
                             echo "<p>$row[productbeschrijving]</p>";
                             echo "</div>";
                             echo "</div>";

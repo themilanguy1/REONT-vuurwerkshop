@@ -81,7 +81,14 @@ ul {
 .productimage {
     max-width: 80%;
     max-height: 175px;
-    
+}
+
+.actie {
+    max-width: 30%;
+}
+
+overflowpindakaas {
+    text-overflow: auto;
 }
 
 .winkelwagen {
@@ -141,9 +148,11 @@ ul {
         font-size: 18px
     }
     .productimage {
-        max-width: 100%;
+        max-width: 95%;
     }
-
+    .actie {
+        max-width: 25%;
+    }
     #winkelwagen-titel {
         font-size: 18px
     }
