@@ -54,9 +54,9 @@
                 <hr>
                 <div class="row">
                 <?php
-                     $user = 'root';
-                     $pass = '';
-                     $db = 'vuurwerkdatabase';
+                     $user = 'deb43619_milan';
+                     $pass = 'MlG199713';
+                     $db = 'deb43619_milan';
                      $db = new mysqli('localhost', $user, $pass, $db) or die("Unable to connect to database");
                                      
                      if ($db->connect_error) {
