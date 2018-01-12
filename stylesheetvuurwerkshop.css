@@ -5,6 +5,10 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+ul {
+    padding: 0;
+}
+
 .navigatie {
     display: block;
     margin: 1em calc(12%) 1.5em calc(12%);
@@ -130,6 +134,10 @@ body {
     #titel {
         font-size: 25px;
     }
+    .assortiment {
+        padding: 16px;
+    }
+
     #assortiment-titel {
         font-size: 18px
     }
