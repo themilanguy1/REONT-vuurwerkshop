@@ -69,7 +69,7 @@
                         echo "<div class='productimagediv'>";
                         echo "<img class='productimage' src='$row[productafbeelding]'>" ;
                         echo "</div>";
-                        echo "<p><b>$row[productnaam]</b></p>";
+                        echo "<p><b>$row[productnaam]</b>   $row[productprijs]</p>";
                         echo "</div>";
                         echo "</div>";
                                          }
