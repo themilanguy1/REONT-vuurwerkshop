@@ -62,7 +62,7 @@ body {
 }
 
 .productcontainer {
-    border: 2px solid lightgrey;
+
 }
 
 .productdiv {
@@ -121,9 +121,12 @@ body {
     .assortiment {
         padding: 0.5em;
     }
+    .footer {
+        font-size: 12px;
+    }
 }
 
-@media (max-width: 995px) {
+@media (max-width: 996px) {
     #titel {
         font-size: 25px;
     }
@@ -133,11 +136,14 @@ body {
     #productenlijst-titel {
         font-size: 18px
     }
+    .productimage {
+        max-width: 100%;
+    }
+
     #winkelwagen-titel {
         font-size: 18px
     }
     .footer {
-        font-size: 12px;
         margin: 1em calc(5%) 1.5em calc(5%);
     }
     .navigatie {

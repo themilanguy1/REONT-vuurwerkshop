@@ -37,16 +37,19 @@
         </div>
     </div>
     <div class="container">
-        <div class="row text-center">
+        <div class="row">
             <div class="assortiment col-md-2">
                 <h4 class="text-center" id="assortiment-titel">Categorie</h4>
                 <hr>
-                <input type="radio" name="Assortiment" value="Compleet">Compleet assortiment<br>
-                <input type="radio" name="Assortiment" value="knalvuurwerk">Knalvuurwerk<br>
-                <input type="radio" name="Assortiment" value="siervuurwerk">Siervuurwerk<br>
-                <input type="radio" name="Assortiment" value="actie">Nieuwjaarsactie<br>
+                <ul>
+                    <li><a href="http://localhost/18week2/REONT%20vuurwerkshop/REONT-vuurwerkshop/Hoofdpaginavuurwerkshop.php">Compleet assortiment</a><br></li>
+                    <ul>
+                    <li><a href="http://localhost/18week2/REONT%20vuurwerkshop/REONT-vuurwerkshop/Hoofdpaginavuurwerkshop.php?cat=knalvuurwerk">Knalvuurwerk</a><br></li>
+                <a href="http://localhost/18week2/REONT%20vuurwerkshop/REONT-vuurwerkshop/Hoofdpaginavuurwerkshop.php?cat=siervuurwerk">Siervuurwerk</a><br>
+                <a href="http://localhost/18week2/REONT%20vuurwerkshop/REONT-vuurwerkshop/Hoofdpaginavuurwerkshop.php?cat=Y">Nieuwjaarsactie</a><br>
             </div>
-            <div class="productenlijst col-md-7 ">
+
+            <div class="productenlijst col-md-7 text-center">
                 <h4 class="text-center" id="productenlijst-titel">Productenlijst</h4>
                 <hr>
                 <div class="row">
@@ -64,30 +67,51 @@
                     
                      if ($result->num_rows> 0)
                      while($row = mysqli_fetch_assoc($result)) {
-                        echo "<div class='productdiv col-md-4'>";
-                        echo "<div class='productcontainer'>";
-                        echo "<div class='productimagediv'>";
-                        echo "<img class='productimage' src='$row[productafbeelding]'>" ;
-                        echo "</div>";
-                        echo "<p><b>$row[productnaam]</b>   $row[productprijs]</p>";
-                        echo "</div>";
-                        echo "</div>";
-                                         }
-                         else 
-                                 echo "Geen producten gevonden";
-                        
-
-
+                         if(isset($_GET['cat'])) {
+                            if ($row['productassortiment'] == $_GET['cat']) {
+                                echo "<div class='productdiv col-md-4'>";
+                                echo "<div class='productcontainer'>";
+                                echo "<div class='productimagediv'>";
+                                echo "<img class='productimage' src='$row[productafbeelding]'>" ;
+                                echo "</div>";
+                                echo "<p><b>$row[productnaam]</b>   &euro;$row[productprijs]</p>";
+                                echo "</div>";
+                                echo "</div>";
+                             }
+                             if ($row['productactie'] == $_GET['cat']) {
+                                echo "<div class='productdiv col-md-4'>";
+                                echo "<div class='productcontainer'>";
+                                echo "<div class='productimagediv'>";
+                                echo "<img class='productimage' src='$row[productafbeelding]'>" ;
+                                echo "</div>";
+                                echo "<p><b>$row[productnaam]</b>   &euro;$row[productprijs]</p>";
+                                echo "</div>";
+                                echo "</div>";
+                             }
+                         } else {
+                            echo "<div class='productdiv col-md-4'>";
+                            echo "<div class='productcontainer'>";
+                            echo "<div class='productimagediv'>";
+                            echo "<img class='productimage' src='$row[productafbeelding]'>" ;
+                            echo "</div>";
+                            echo "<p><b>$row[productnaam]</b>   &euro;$row[productprijs]</p>";
+                            echo "</div>";
+                            echo "</div>";
+                        }
+                    } else 
+                        echo "Geen producten gevonden";
                 ?>
                 </div>
             </div>
+
             <div class="winkelwagen col-md-2 ">
                 <h4 class="text-center" id="winkelwagen-titel">Winkelwagen</h4>
                 <hr>
                 winkelwagen content
             </div>
+
         </div>
-        <hr>
+    <hr>
     </div>
         <div class="footer"> 
             <p id="adres"><strong>Adres: </strong>Stolwijkstraat 8</p>
