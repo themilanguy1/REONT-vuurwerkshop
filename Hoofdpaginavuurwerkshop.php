@@ -64,15 +64,18 @@
                     
                      if ($result->num_rows> 0)
                      while($row = mysqli_fetch_assoc($result)) {
-                        echo '<div class="product col-md-4">';
-                        echo '<p>' . $row["productnaam"] . '</p>';
-                        echo '</div>';
+                        echo "<div class='productdiv col-md-4'>";
+                        echo "<div class='productcontainer'>";
+                        echo "<div class='productimagediv'>";
+                        echo "<img class='productimage' src='$row[productafbeelding]'>" ;
+                        echo "</div>";
+                        echo "<p><b>$row[productnaam]</b></p>";
+                        echo "</div>";
+                        echo "</div>";
                                          }
                          else 
                                  echo "Geen producten gevonden";
-                        /*
-                        <tr><td>" . $row["datum"] . "</td><td>" . $row["afspraak"] . "</td><td>" . $row["adres"] . "<td> <a href='deleterow.php?id=" . $row["id"] . "'><img src='https://www.ictacademie.info/milangupta/favicon/trashicon2.ico' title='Remove' alt='remove icon'></img></a></td></tr>
-                        */
+                        
 
 
                 ?>

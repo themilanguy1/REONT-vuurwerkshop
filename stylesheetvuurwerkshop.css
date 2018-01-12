@@ -9,8 +9,8 @@ body {
     display: block;
     margin: 1em calc(12%) 1.5em calc(12%);
     padding: 1em;
-    border-top: 5px solid rgb(227, 248, 255);
-    border-radius: 10px;
+    border-top: 3px solid lightblue;
+
 }
 
 #home {
@@ -61,11 +61,27 @@ body {
     margin: 0.5em;
 }
 
-.product {
-    display: inline-block;
-    font-size: 15px;
+.productcontainer {
     border: 2px solid lightgrey;
-    margin: 0.3em;
+}
+
+.productdiv {
+    font-size: 15px;
+    margin-bottom: 1em;    
+}
+
+.productimagediv {
+    height: 175px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.productimage {
+    max-width: 80%;
+    max-height: 175px;
+    
 }
 
 .winkelwagen {
@@ -78,8 +94,7 @@ body {
     display: block;
     padding: 0.5em;
     margin: 1em calc(12%) 1.5em calc(12%);
-    border-bottom: 5px solid lightblue;
-    border-radius: 10px;
+    border-bottom: 3px solid lightblue;
 }
 
 #adres {
