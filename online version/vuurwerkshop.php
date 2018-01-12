@@ -42,10 +42,10 @@
                 <h4 class="text-center" id="assortiment-titel">Categorie</h4>
                 <hr>
                 <ul>
-                    <li><a href="http://localhost/18week2/REONT%20vuurwerkshop/Hoofdpaginavuurwerkshop.php">Compleet assortiment</a><br></li>
-                    <li><a href="http://localhost/18week2/REONT%20vuurwerkshop/Hoofdpaginavuurwerkshop.php?cat=knalvuurwerk">Knalvuurwerk</a><br></li>
-                    <li><a href="http://localhost/18week2/REONT%20vuurwerkshop/Hoofdpaginavuurwerkshop.php?cat=siervuurwerk">Siervuurwerk</a><br></li>
-                    <li><a href="http://localhost/18week2/REONT%20vuurwerkshop/Hoofdpaginavuurwerkshop.php?cat=Y">Nieuwjaarsactie</a><br></li>
+                    <li><a href="https://www.ictacademie.info/milangupta/18week2/vuurwerkshop.php">Compleet assortiment</a><br></li>
+                    <li><a href="https://www.ictacademie.info/milangupta/18week2/vuurwerkshop.php?cat=knalvuurwerk">Knalvuurwerk</a><br></li>
+                    <li><a href="https://www.ictacademie.info/milangupta/18week2/vuurwerkshop.php?cat=siervuurwerk">Siervuurwerk</a><br></li>
+                    <li><a href="https://www.ictacademie.info/milangupta/18week2/vuurwerkshop.php?cat=Y">Nieuwjaarsactie</a><br></li>
                 </ul>
             </div>
 
@@ -54,9 +54,9 @@
                 <hr>
                 <div class="row">
                 <?php
-                     $user = 'root';
-                     $pass = '';
-                     $db = 'vuurwerkdatabase';
+                     $user = 'deb43619_milan';
+                     $pass = 'MlG199713';
+                     $db = 'deb43619_milan';
                      $db = new mysqli('localhost', $user, $pass, $db) or die("Unable to connect to database");
                                      
                      if ($db->connect_error) {
