@@ -36,17 +36,17 @@
             
         </div>
     </div>
-    <div class="container">
+    <div class="container containerdoos">
         <div class="row">
             <div class="assortiment col-md-2">
                 <h4 class="text-center" id="assortiment-titel">Categorie</h4>
                 <hr>
                 <ul>
                     <li><a href="http://localhost/18week2/REONT%20vuurwerkshop/REONT-vuurwerkshop/Hoofdpaginavuurwerkshop.php">Compleet assortiment</a><br></li>
-                    <ul>
                     <li><a href="http://localhost/18week2/REONT%20vuurwerkshop/REONT-vuurwerkshop/Hoofdpaginavuurwerkshop.php?cat=knalvuurwerk">Knalvuurwerk</a><br></li>
-                <a href="http://localhost/18week2/REONT%20vuurwerkshop/REONT-vuurwerkshop/Hoofdpaginavuurwerkshop.php?cat=siervuurwerk">Siervuurwerk</a><br>
-                <a href="http://localhost/18week2/REONT%20vuurwerkshop/REONT-vuurwerkshop/Hoofdpaginavuurwerkshop.php?cat=Y">Nieuwjaarsactie</a><br>
+                    <li><a href="http://localhost/18week2/REONT%20vuurwerkshop/REONT-vuurwerkshop/Hoofdpaginavuurwerkshop.php?cat=siervuurwerk">Siervuurwerk</a><br></li>
+                    <li><a href="http://localhost/18week2/REONT%20vuurwerkshop/REONT-vuurwerkshop/Hoofdpaginavuurwerkshop.php?cat=Y">Nieuwjaarsactie</a><br></li>
+                </ul>
             </div>
 
             <div class="productenlijst col-md-7 text-center">
