@@ -55,18 +55,14 @@ ul {
 
 .assortiment {
     display: block;
-    padding: 0.5em 0.5em 110px 0.5em;
+    padding: 0.5em 0.5em 95px 0.5em;
     margin: 0.5em;
 }
 
 .productenlijst {
     display: block;
-    padding: 0.5em 0.5em 110px 0.5em;
+    padding: 0.5em 0.5em 95px 0.5em;
     margin: 0.5em;
-}
-
-.productcontainer {
-
 }
 
 .productdiv {
@@ -90,14 +86,14 @@ ul {
 
 .winkelwagen {
     display: block;
-    padding: 0.5em 0.5em 110px 0.5em;
+    padding: 0.5em 0.5em 95px 0.5em;
     margin: 0.5em;
 }
 
 .footer {
     display: block;
     padding: 0.5em;
-    margin: 1em calc(12%) 1.5em calc(12%);
+    margin: 1em 12% 1.5em 12%;
     border-bottom: 3px solid lightblue;
 }
 
@@ -152,9 +148,9 @@ ul {
         font-size: 18px
     }
     .footer {
-        margin: 1em calc(5%) 1.5em calc(5%);
+        margin: 1em 5% 1.5em 5%;
     }
     .navigatie {
-        margin: 1em calc(5%) 1.5em calc(5%);
+        margin: 1em 5% 1.5em 5%;
     }
 }

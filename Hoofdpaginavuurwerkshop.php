@@ -95,6 +95,9 @@
                             echo "<img class='productimage' src='$row[productafbeelding]'>" ;
                             echo "</div>";
                             echo "<p><b>$row[productnaam]</b>   &euro;$row[productprijs]</p>";
+                            echo "<div style='text-size-adjust: 70%'>";
+                            echo "<p>$row[productbeschrijving]</p>";
+                            echo "</div>";
                             echo "</div>";
                             echo "</div>";
                         }
