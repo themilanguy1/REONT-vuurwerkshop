@@ -42,10 +42,10 @@
                 <h4 class="text-center" id="assortiment-titel">Categorie</h4>
                 <hr>
                 <ul>
-                    <li><a href="http://localhost/18week2/REONT%20vuurwerkshop/Hoofdpaginavuurwerkshop.php">Compleet assortiment</a><br></li>
-                    <li><a href="http://localhost/18week2/REONT%20vuurwerkshop/Hoofdpaginavuurwerkshop.php?cat=knalvuurwerk">Knalvuurwerk</a><br></li>
-                    <li><a href="http://localhost/18week2/REONT%20vuurwerkshop/Hoofdpaginavuurwerkshop.php?cat=siervuurwerk">Siervuurwerk</a><br></li>
-                    <li><a href="http://localhost/18week2/REONT%20vuurwerkshop/Hoofdpaginavuurwerkshop.php?cat=Y">Nieuwjaarsactie</a><br></li>
+                    <li><a href="http://localhost/18week2/REONT%20vuurwerkshop/webshop version/hoofdpaginavuurwerkshop.php">Compleet assortiment</a><br></li>
+                    <li><a href="http://localhost/18week2/REONT%20vuurwerkshop/webshop version/hoofdpaginavuurwerkshop.php?cat=knalvuurwerk">Knalvuurwerk</a><br></li>
+                    <li><a href="http://localhost/18week2/REONT%20vuurwerkshop/webshop version/hoofdpaginavuurwerkshop.php?cat=siervuurwerk">Siervuurwerk</a><br></li>
+                    <li><a href="http://localhost/18week2/REONT%20vuurwerkshop/webshop version/hoofdpaginavuurwerkshop.php?cat=Y">Nieuwjaarsactie</a><br></li>
                 </ul>
             </div>
 
@@ -53,6 +53,7 @@
                 <h4 class="text-center" id="productenlijst-titel">Productenlijst</h4>
                 <hr>
                 <div class="row">
+
                 <?php
                      $user = 'root';
                      $pass = '';
@@ -65,13 +66,10 @@
                                  
                      $result = mysqli_query($db, 'SELECT * FROM vuurwerk');
                     
-                     
                      if ($result->num_rows> 0)
                      while($row = mysqli_fetch_assoc($result)) {
                          if(isset($_GET['cat'])) {
-                             
                             if ($row['productassortiment'] == $_GET['cat']) {
-                                echo "<form name='form1' action='http://localhost/18week2/REONT%20vuurwerkshop/webshop%20version/hoofdpaginavuurwerkshop.php?id=1' method='post'>";
                                 echo "<div class='productdiv col-md-4'>";
                                 echo "<div class='productcontainer'>";
                                 echo "<div class='productimagediv'>";
@@ -80,17 +78,13 @@
                                 echo "<p><b>$row[productnaam]</b>   &euro;$row[productprijs]</p>";
                                 echo "<div class='overflowpindakaas'>";
                                 echo "<p>$row[productbeschrijving]</p>";
-                                echo "<button type='submit' name'submit1' class='btn btn-default cart'>";
-                                echo "<i class='fa fa-shopping cart'>";
-                                echo "</i>";
-                                echo "Add to cart";
-                                echo "</button>";
-                                echo "</form>";
+                                echo "<form name='form1' action='cookieset.php' method='post'>";
+                                echo "<button type='submit' name'submit1' class='btn btn-default cart'><i class='fa fa-shopping cart'></i>Add to cart</button></form>";
                                 echo "</div>";
                                 echo "</div>";
                                 echo "</div>";
                              }
-                             if ($row['productactie'] == $_GET['cat']) {
+                            if ($row['productactie'] == $_GET['cat']) {
                                 echo "<div class='productdiv col-md-4'>";
                                 echo "<div class='productcontainer'>";
                                 echo "<div class='productimagediv'>";
@@ -100,6 +94,8 @@
                                 echo "<p><b>$row[productnaam]</b>   &euro;$row[productprijs]</p>";
                                 echo "<div class='overflowpindakaas'>";
                                 echo "<p>$row[productbeschrijving]</p>";
+                                echo "<form name='form1' action='cookieset.php' method='post'>";
+                                echo "<button type='submit' name'submit1' class='btn btn-default cart'><i class='fa fa-shopping cart'></i>Add to cart</button></form>";
                                 echo "</div>";
                                 echo "</div>";
                                 echo "</div>";
@@ -113,12 +109,13 @@
                             echo "<p><b>$row[productnaam]</b>   &euro;$row[productprijs]</p>";
                             echo "<div class='overflowpindakaas'>";
                             echo "<p>$row[productbeschrijving]</p>";
+                            echo "<form name='form1' action='cookieset.php' method='post'>";
+                            echo "<button type='submit' name'submit1' class='btn btn-default cart'><i class='fa fa-shopping cart'></i>Add to cart</button></form>";
                             echo "</div>";
                             echo "</div>";
                             echo "</div>";
                         }
-                    } else 
-                        echo "Geen producten gevonden";
+                    }
                 ?>
                 </div>
             </div>
@@ -128,6 +125,20 @@
                 <h4 class="text-center" id="winkelwagen-titel">Winkelwagen</h4>
                 <hr>
                 
+            
+ 
+                    <?php
+                    $cookie_name = "user";
+                    if(isset($_COOKIE['user'])) {
+                        echo "cookie " . "'" . $cookie_name . "'" . " is: " . $_COOKIE[$cookie_name];
+                        echo "<br>cookies werken!";
+                    }
+                    else {
+                        echo "geen producten gevonden in winkelwagen.";
+                    }
+
+                    ?>
+
                  
             </div>
 
@@ -144,4 +155,3 @@
         </div>
 </body>
 </html>
-

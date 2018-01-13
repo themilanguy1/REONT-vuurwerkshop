@@ -42,10 +42,10 @@
                 <h4 class="text-center" id="assortiment-titel">Categorie</h4>
                 <hr>
                 <ul>
-                    <li><a href="http://localhost/18week2/REONT%20vuurwerkshop/Hoofdpaginavuurwerkshop.php">Compleet assortiment</a><br></li>
-                    <li><a href="http://localhost/18week2/REONT%20vuurwerkshop/Hoofdpaginavuurwerkshop.php?cat=knalvuurwerk">Knalvuurwerk</a><br></li>
-                    <li><a href="http://localhost/18week2/REONT%20vuurwerkshop/Hoofdpaginavuurwerkshop.php?cat=siervuurwerk">Siervuurwerk</a><br></li>
-                    <li><a href="http://localhost/18week2/REONT%20vuurwerkshop/Hoofdpaginavuurwerkshop.php?cat=Y">Nieuwjaarsactie</a><br></li>
+                    <li><a href="http://localhost/18week2/REONT%20vuurwerkshop/hoofdpaginavuurwerkshop.php">Compleet assortiment</a><br></li>
+                    <li><a href="http://localhost/18week2/REONT%20vuurwerkshop/hoofdpaginavuurwerkshop.php?cat=knalvuurwerk">Knalvuurwerk</a><br></li>
+                    <li><a href="http://localhost/18week2/REONT%20vuurwerkshop/hoofdpaginavuurwerkshop.php?cat=siervuurwerk">Siervuurwerk</a><br></li>
+                    <li><a href="http://localhost/18week2/REONT%20vuurwerkshop/hoofdpaginavuurwerkshop.php?cat=Y">Nieuwjaarsactie</a><br></li>
                 </ul>
             </div>
 
