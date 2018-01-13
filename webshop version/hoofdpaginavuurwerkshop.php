@@ -65,10 +65,13 @@
                                  
                      $result = mysqli_query($db, 'SELECT * FROM vuurwerk');
                     
+                     
                      if ($result->num_rows> 0)
                      while($row = mysqli_fetch_assoc($result)) {
                          if(isset($_GET['cat'])) {
+                             
                             if ($row['productassortiment'] == $_GET['cat']) {
+                                echo "<form name='form1' action='http://localhost/18week2/REONT%20vuurwerkshop/webshop%20version/hoofdpaginavuurwerkshop.php?id=1' method='post'>";
                                 echo "<div class='productdiv col-md-4'>";
                                 echo "<div class='productcontainer'>";
                                 echo "<div class='productimagediv'>";
@@ -77,6 +80,12 @@
                                 echo "<p><b>$row[productnaam]</b>   &euro;$row[productprijs]</p>";
                                 echo "<div class='overflowpindakaas'>";
                                 echo "<p>$row[productbeschrijving]</p>";
+                                echo "<button type='submit' name'submit1' class='btn btn-default cart'>";
+                                echo "<i class='fa fa-shopping cart'>";
+                                echo "</i>";
+                                echo "Add to cart";
+                                echo "</button>";
+                                echo "</form>";
                                 echo "</div>";
                                 echo "</div>";
                                 echo "</div>";
@@ -114,10 +123,12 @@
                 </div>
             </div>
 
+
             <div class="winkelwagen col-md-2 ">
                 <h4 class="text-center" id="winkelwagen-titel">Winkelwagen</h4>
                 <hr>
-                winkelwagen content
+                
+                 
             </div>
 
         </div>
