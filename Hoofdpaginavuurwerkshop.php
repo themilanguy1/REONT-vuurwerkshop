@@ -54,20 +54,30 @@
                 <hr>
                 <div class="row">
                 <?php
-                     $user = 'root';
-                     $pass = '';
-                     $db = 'vuurwerkdatabase';
-                     $db = new mysqli('localhost', $user, $pass, $db) or die("Unable to connect to database");
-                                     
-                     if ($db->connect_error) {
-                          die("Connection failed: " . $db->connect_error);
-                     } 
-                                 
-                     $result = mysqli_query($db, 'SELECT * FROM vuurwerk');
+                    $user = 'root';
+                    $pass = '';
+                    $db = 'vuurwerkdatabase';
+                    $db = new mysqli('localhost', $user, $pass, $db) or die("Unable to connect to database");
+                                    
+                    if ($db->connect_error) {
+                        die("Connection failed: " . $db->connect_error);
+                    } 
                     
-                     if ($result->num_rows> 0)
-                     while($row = mysqli_fetch_assoc($result)) {
-                         if(isset($_GET['cat'])) {
+                    $sql = "SELECT productid, productnaam FROM vuurwerk ORDER BY productnaam";
+                    
+                    $result2=mysqli_query($db,$sql);
+
+                    //$row=mysqli_fetch_array($result2,MYSQLI_NUM);
+                    //printf ("%s (%s)\n",$row[0],$row[1]);
+
+                    $row=mysqli_fetch_array($result2,MYSQLI_ASSOC);
+                    echo "$row[productnaam] $row[productid]";
+
+                    $result = mysqli_query($db, 'SELECT * FROM vuurwerk');
+                
+                    if ($result->num_rows> 0)
+                    while($row = mysqli_fetch_assoc($result)) {
+                        if(isset($_GET['cat'])) {
                             if ($row['productassortiment'] == $_GET['cat']) {
                                 echo "<div class='productdiv col-md-4'>";
                                 echo "<div class='productcontainer'>";
@@ -80,13 +90,26 @@
                                 echo "</div>";
                                 echo "</div>";
                                 echo "</div>";
-                             }
-                             if ($row['productactie'] == $_GET['cat']) {
+                                }
+                                if ($row['productactie'] == $_GET['cat']) {
+                                    echo "<div class='productdiv col-md-4'>";
+                                    echo "<div class='productcontainer'>";
+                                    echo "<div class='productimagediv'>";
+                                    echo "<img class='productimage' src='$row[productafbeelding]'>" ;
+                                    echo "<img class='actie' src='http://www.autobedrijf-jenf.nl/site/wp-content/uploads/2016/03/actie2.png'>";
+                                    echo "</div>";
+                                    echo "<p><b>$row[productnaam]</b>   &euro;$row[productprijs]</p>";
+                                    echo "<div class='overflowpindakaas'>";
+                                    echo "<p>$row[productbeschrijving]</p>";
+                                    echo "</div>";
+                                    echo "</div>";
+                                    echo "</div>";
+                                }
+                            } else {
                                 echo "<div class='productdiv col-md-4'>";
                                 echo "<div class='productcontainer'>";
                                 echo "<div class='productimagediv'>";
                                 echo "<img class='productimage' src='$row[productafbeelding]'>" ;
-                                echo "<img class='actie' src='http://www.autobedrijf-jenf.nl/site/wp-content/uploads/2016/03/actie2.png'>";
                                 echo "</div>";
                                 echo "<p><b>$row[productnaam]</b>   &euro;$row[productprijs]</p>";
                                 echo "<div class='overflowpindakaas'>";
@@ -94,19 +117,6 @@
                                 echo "</div>";
                                 echo "</div>";
                                 echo "</div>";
-                             }
-                         } else {
-                            echo "<div class='productdiv col-md-4'>";
-                            echo "<div class='productcontainer'>";
-                            echo "<div class='productimagediv'>";
-                            echo "<img class='productimage' src='$row[productafbeelding]'>" ;
-                            echo "</div>";
-                            echo "<p><b>$row[productnaam]</b>   &euro;$row[productprijs]</p>";
-                            echo "<div class='overflowpindakaas'>";
-                            echo "<p>$row[productbeschrijving]</p>";
-                            echo "</div>";
-                            echo "</div>";
-                            echo "</div>";
                         }
                     } else 
                         echo "Geen producten gevonden";
