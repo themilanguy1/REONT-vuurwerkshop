@@ -36,7 +36,8 @@
     <div class="container containerdoos">
         <div class="row">
             <div class="col-md-10" style="float: none; margin: 0 auto;">    
-                <h5>Afhaallocatie</h5>
+                <h5 style="float:left; margin: 0.5em auto ;">Afhaallocatie</h5>
+                <h5 style="float: right; margin: 0.5em auto ;">Stolwijkstraat 8</h5>
                 <div id="map"></div>
                     <script>
                     function initMap() {
