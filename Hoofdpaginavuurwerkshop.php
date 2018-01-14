@@ -50,7 +50,8 @@
             <div class="productenlijst col-md-7 text-center">
                 <h4 class="text-center" id="productenlijst-titel">Productenlijst</h4>
                 <hr>
-                <div class="row">
+                <div class="row" style="float: none; margin: 0 auto;">
+                <div class="col-md-7" style="margin: 0 auto;">
                 <?php
                     $user = 'root';
                     $pass = '';
@@ -65,16 +66,13 @@
 
 
                     //PROBEERSEL
-
-                    if ($count = $result->num_rows) {
-                        echo "<p> $count </p><br>";
-
-                        while($row = $result->fetch_object()) {
-                            echo $row->productid ." ". $row->productnaam ."<br>";
-                        }
-                    }
-
-
+                    if ($result->num_rows> 0) {
+                        echo "<table><tr><th>id</th><th>naam</th></tr>";
+                        while($row = mysqli_fetch_assoc($result)) {
+                                echo "<tr><td>" . $row["productid"] . "</td><td>" . $row["productnaam"] . "</td></tr>";
+                            }
+                            echo "</table>";
+                    } 
 
                     /*
                     $sql1 = "SELECT * FROM vuurwerk";
@@ -160,7 +158,10 @@
                     */
 
 
+                    //deze laatste div CLOSE is onnodig na table removal!
                 ?>
+                </div>
+                
             
                 </div>
             </div>
