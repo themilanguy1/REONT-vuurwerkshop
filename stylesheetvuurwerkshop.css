@@ -9,12 +9,17 @@ ul {
     padding: 0;
 }
 
+#map {
+    width: 100%;
+    height: 400px;
+    background-color: grey;
+}
+
 .navigatie {
     display: block;
     margin: 1em calc(12%) 1.5em calc(12%);
     padding: 1em;
     border-top: 3px solid lightblue;
-
 }
 
 #home {

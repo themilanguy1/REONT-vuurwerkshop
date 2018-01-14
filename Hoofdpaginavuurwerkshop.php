@@ -63,15 +63,12 @@
                         die("Connection failed: " . $db->connect_error);
                     } 
                     
-                    $sql = "SELECT productid, productnaam FROM vuurwerk ORDER BY productnaam";
+                    //$sql = "SELECT productid, productnaam FROM vuurwerk ORDER BY productnaam";
                     
-                    $result2=mysqli_query($db,$sql);
+                    //$result2=mysqli_query($db,$sql);
 
-                    //$row=mysqli_fetch_array($result2,MYSQLI_NUM);
-                    //printf ("%s (%s)\n",$row[0],$row[1]);
-
-                    $row=mysqli_fetch_array($result2,MYSQLI_ASSOC);
-                    echo "$row[productnaam] $row[productid]";
+                    //$row=mysqli_fetch_array($result2,MYSQLI_ASSOC);
+                    //echo "$row[productnaam] $row[productid]";
 
                     $result = mysqli_query($db, 'SELECT * FROM vuurwerk');
                 
