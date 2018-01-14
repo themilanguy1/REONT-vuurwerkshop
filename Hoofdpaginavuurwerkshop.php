@@ -61,13 +61,55 @@
                         die("Connection failed: " . $db->connect_error);
                     } 
                     
-                    //$sql = "SELECT productid, productnaam FROM vuurwerk ORDER BY productnaam";
+                    $result = mysqli_query($db, 'SELECT productid, productnaam FROM vuurwerk');
+
+
+                    //PROBEERSEL
+
+                    if ($count = $result->num_rows) {
+                        echo "<p> $count </p><br>";
+
+                        while($row = $result->fetch_object()) {
+                            echo $row->productid ." ". $row->productnaam ."<br>";
+                        }
+                    }
+
+
+
+                    /*
+                    $sql1 = "SELECT * FROM vuurwerk";
+
+                    $result = mysqli_query($db, 'SELECT * FROM vuurwerk');
+                    if($result=$db->query($sql)) {
+                        if($row = $result->fetch_array()) {
+                            //var_dump($rows);
+                            echo $rows['productid']. " " . $rows['productnaam']. " ".$rows['productprijs'];
+                            echo "<br>";
+                        }
+                    }
+
+
+                    //$sql2 = "SELECT productnaam FROM vuurwerk";
                     
-                    //$result2=mysqli_query($db,$sql);
+                    //$result1=mysqli_query($db,$sql1);
+                    //$result2=mysqli_query($db,$sql2);
 
-                    //$row=mysqli_fetch_array($result2,MYSQLI_ASSOC);
-                    //echo "$row[productnaam] $row[productid]";
+                    //$array=mysqli_fetch_array(
+                   //     array($result1,MYSQLI_ASSOC),
+                   //     array($result2,MYSQLI_ASSOC)
+                   // );
 
+                   //$result1=mysqli_query($db,$sql1);
+                   //$row=mysqli_fetch_array($result1,MYSQLI_NUM);
+                   // echo $row[0];
+
+                    //$row=mysqli_fetch_array($result2,MYSQLI_NUM);
+                    //echo "$row[productnaam] $row[productafbeelding]";
+                    */
+
+
+
+                    /* OLD
                     $result = mysqli_query($db, 'SELECT * FROM vuurwerk');
                 
                     if ($result->num_rows> 0)
@@ -114,7 +156,12 @@
                                 echo "</div>";
                         }
                     }
+
+                    */
+
+
                 ?>
+            
                 </div>
             </div>
 
