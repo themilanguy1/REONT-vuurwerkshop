@@ -113,8 +113,7 @@
                                 echo "</div>";
                                 echo "</div>";
                         }
-                    } else 
-                        echo "Geen producten gevonden";
+                    }
                 ?>
                 </div>
             </div>
