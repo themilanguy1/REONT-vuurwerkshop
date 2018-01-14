@@ -28,14 +28,12 @@
     <meta name="theme-color" content="#ffffff">
 </head>
 <body>
-    <div class="navigatie">
-        <div>
-            <a class="text-center" id="home" href="https://www.example.com">Home</a>
-            <a class="text-center" id="contact" href="https://www.example.com">Contact</a>
+    <nav class="navigatie text-center">
+            <a id="home" href="http://localhost/18week2/REONT%20vuurwerkshop/hoofdpaginavuurwerkshop.php">Home</a>
+            <a id="portfolioknop" href="https://www.ictacademie.info/milangupta/">Portfolio</a>
             <h2 class="text-center" id="titel">  Vuurwerkshop</h2>
-            
         </div>
-    </div>
+    </nav>
     <div class="container containerdoos">
         <div class="row">
             <div class="assortiment col-md-2">
@@ -79,7 +77,7 @@
                                 echo "<div class='productdiv col-md-4'>";
                                 echo "<div class='productcontainer'>";
                                 echo "<div class='productimagediv'>";
-                                echo "<img class='productimage' src='$row[productafbeelding]'>" ;
+                                echo "<img class='productimage' src='$row[productafbeelding]' title=$row[productnaam]>" ;
                                 echo "</div>";
                                 echo "<p><b>$row[productnaam]</b>   &euro;$row[productprijs]</p>";
                                 echo "<div class='overflowpindakaas'>";
@@ -92,7 +90,7 @@
                                     echo "<div class='productdiv col-md-4'>";
                                     echo "<div class='productcontainer'>";
                                     echo "<div class='productimagediv'>";
-                                    echo "<img class='productimage' src='$row[productafbeelding]'>" ;
+                                    echo "<img class='productimage' src='$row[productafbeelding]' title=$row[productnaam]>" ;
                                     echo "<img class='actie' src='http://www.autobedrijf-jenf.nl/site/wp-content/uploads/2016/03/actie2.png'>";
                                     echo "</div>";
                                     echo "<p><b>$row[productnaam]</b>   &euro;$row[productprijs]</p>";
@@ -106,7 +104,7 @@
                                 echo "<div class='productdiv col-md-4'>";
                                 echo "<div class='productcontainer'>";
                                 echo "<div class='productimagediv'>";
-                                echo "<img class='productimage' src='$row[productafbeelding]'>" ;
+                                echo "<img class='productimage' src='$row[productafbeelding]' title=$row[productnaam]>" ;
                                 echo "</div>";
                                 echo "<p><b>$row[productnaam]</b>   &euro;$row[productprijs]</p>";
                                 echo "<div class='overflowpindakaas'>";
@@ -130,14 +128,12 @@
         </div>
     <hr>
     </div>
-        <div class="footer"> 
-            <p id="adres"><strong>Adres: </strong>Stolwijkstraat 8</p>
-            <p><strong>Email: </strong>vuurwerkshop3@gmail.com</p>
-            <a id="routebeschrijving" href="https://www.example.com"><strong>Routebeschrijving</strong></a>
-            <p><strong>Telefoon: </strong>010-4675538</p>
-
-
-        </div>
+    <div class="footer"> 
+        <p id="adres"><strong>Adres: </strong>Stolwijkstraat 8</p>
+        <p><strong>Email: </strong>vuurwerkshop3@gmail.com</p>
+        <a id="routebeschrijving" href="http://localhost/18week2/REONT%20vuurwerkshop/contactpaginavuurwerkshop.php"><img id="googlemapsimg" src="https://www.ictacademie.info/milangupta/images/google-maps.png" title="Google maps"></a>
+        <p><strong>Telefoon: </strong>010-4675538</p>
+    </div>
 </body>
 </html>
 

@@ -5,6 +5,10 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+a {
+    text-decoration: none;
+}
+
 ul {
     padding: 0;
 }
@@ -17,7 +21,7 @@ ul {
 
 .navigatie {
     display: block;
-    margin: 1em calc(12%) 1.5em calc(12%);
+    margin: 1em 12% 1.5em 12%;
     padding: 1em;
     border-top: 3px solid lightblue;
 }
@@ -42,7 +46,7 @@ ul {
     font-size: 40px;
 }
 
-#contact {
+#portfolioknop {
     padding: 0.3em;
     border: 1.5px solid rgba(129, 135, 226, 0.568);
     border-radius: 10px;
@@ -53,7 +57,7 @@ ul {
     float: right;
 } 
 
-#contact:hover {
+#portfolioknop:hover {
     background-color: rgba(129, 135, 226, 0.568);
     text-decoration: none;
 }
@@ -115,6 +119,12 @@ overflowpindakaas {
 
 #routebeschrijving {
     float: right;
+    text-decoration: none;
+}
+
+#googlemapsimg {
+    width: 6%;
+    float:right;
 }
 
 @media (max-width: 769px) {
@@ -135,6 +145,12 @@ overflowpindakaas {
     }
     .footer {
         font-size: 12px;
+    }
+    #googlemapsimg {
+        width: 25%;
+    }
+    #routebeschrijving {
+        width: 130px;
     }
 }
 

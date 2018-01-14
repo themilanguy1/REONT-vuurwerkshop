@@ -28,21 +28,17 @@
     <meta name="theme-color" content="#ffffff">
 </head>
 <body>
-    <div class="navigatie">
-            <a class="text-center" id="home" href="https://www.example.com">Home</a>
-            <a class="text-center" id="contact" href="https://www.example.com">Contact</a>
-            <h2 class="text-center" id="titel">  Vuurwerkshop</h2>   
-    </div>
+<nav class="navigatie text-center">
+    <a id="home" href="http://localhost/18week2/REONT%20vuurwerkshop/hoofdpaginavuurwerkshop.php">Home</a>
+    <a id="portfolioknop" href="https://www.ictacademie.info/milangupta/">Portfolio</a>
+    <h2 class="text-center" id="titel">  Vuurwerkshop</h2>
+</nav>
     <div class="container containerdoos">
         <div class="row">
-            <div class="col-md-6">
-                <h5>Contact informatie</h5>
-            </div>
-
-            <div class="col-md-6">
-                <h5>Route naar afhaallocatie</h5>
+            <div class="col-md-10" style="float: none; margin: 0 auto;">    
+                <h5>Afhaallocatie</h5>
                 <div id="map"></div>
-                <script>
+                    <script>
                     function initMap() {
                         var Stolwijkstraat = {lat: 51.878533, lng: 4.538676};
                         var map = new google.maps.Map(document.getElementById('map'), {
@@ -53,21 +49,20 @@
                             position: Stolwijkstraat,
                             map: map
                         });
-      }
-    </script>
+                    }
+                    </script>
+                </div>
             </div>
-
+            <hr>
         </div>
-    <hr>
+ 
     </div>
-        <div class="footer"> 
-            <p id="adres"><strong>Adres: </strong>Stolwijkstraat 8</p>
-            <p><strong>Email: </strong>vuurwerkshop3@gmail.com</p>
-            <a id="routebeschrijving" class="btn btn-primary" href="www.example.com" role="button"><strong>Routebeschrijving</strong></a>
-            <p><strong>Telefoon: </strong>010-4675538</p>
-
-
-        </div>
+    <div class="footer"> 
+    <p id="adres"><strong>Adres: </strong>Stolwijkstraat 8</p>
+    <p><strong>Email: </strong>vuurwerkshop3@gmail.com</p>
+    <a id="routebeschrijving" href="http://localhost/18week2/REONT%20vuurwerkshop/contactpaginavuurwerkshop.php"><img id="googlemapsimg" src="https://www.ictacademie.info/milangupta/images/google-maps.png"></a>
+    <p><strong>Telefoon: </strong>010-4675538</p>
+    </div>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBSststdq7s_oQ0aE2VmgG9qpqOAQpegnU&callback=initMap">
     </script>
