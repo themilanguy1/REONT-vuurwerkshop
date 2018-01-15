@@ -50,8 +50,7 @@
             <div class="productenlijst col-md-7 text-center">
                 <h4 class="text-center" id="productenlijst-titel">Productenlijst</h4>
                 <hr>
-                <div class="row" style="float: none; margin: 0 auto;">
-                <div class="col-md-7" style="margin: 0 auto;">
+                <div class="row">
                 <?php
                     $user = 'root';
                     $pass = '';
@@ -62,7 +61,7 @@
                         die("Connection failed: " . $db->connect_error);
                     } 
                     
-                    $result = mysqli_query($db, 'SELECT productid, productnaam FROM vuurwerk');
+                    /*$result = mysqli_query($db, 'SELECT productid, productnaam FROM vuurwerk');
 
 
                     //PROBEERSEL
@@ -73,6 +72,8 @@
                             }
                             echo "</table>";
                     } 
+                    */
+
 
                     /*
                     $sql1 = "SELECT * FROM vuurwerk";
@@ -104,10 +105,7 @@
                     //$row=mysqli_fetch_array($result2,MYSQLI_NUM);
                     //echo "$row[productnaam] $row[productafbeelding]";
                     */
-
-
-
-                    /* OLD
+                    
                     $result = mysqli_query($db, 'SELECT * FROM vuurwerk');
                 
                     if ($result->num_rows> 0)
@@ -154,13 +152,8 @@
                                 echo "</div>";
                         }
                     }
-
-                    */
-
-
-                    //deze laatste div CLOSE is onnodig na table removal!
                 ?>
-                </div>
+  
                 
             
                 </div>
