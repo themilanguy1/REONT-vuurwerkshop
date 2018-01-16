@@ -121,7 +121,7 @@
                                 echo "<p><b>$row[productnaam]</b>   &euro;$row[productprijs]</p>";
                                 echo "<div class='overflowpindakaas'>";
                                 echo "<p>$row[productbeschrijving]</p>";
-                                echo "<a href='addproduct.php?ProdId=$row[productid]'><button class='btn btn-primary'>";
+                                echo "<a href='producttoevoegen.php?ProdId=$row[productid]'><button class='btn btn-primary'>";
                                 echo "Add +</button></a>";
                                 echo "</div>";
                                 echo "</div>";
