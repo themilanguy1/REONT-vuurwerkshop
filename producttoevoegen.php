@@ -20,8 +20,17 @@
                         foreach($Cart as $CartItem) {
                             if ($CartItem['productid'] == $row['productid']) {
                                 //add to amount
-                                header('location:hoofdpaginavuurwerkshop.php');
-                                die;
+                                if(isset($_GET['cat'])) {
+                                    header('location:hoofdpaginavuurwerkshop.php?cat=' . $_GET['cat']);
+                                    die;
+                                }
+                                elseif(isset($_GET['cat'])) {
+                                    header('location:hoofdpaginavuurwerkshop.php?cat=' . $_GET['cat']);
+                                    die;    
+                                } else {
+                                    //header('location:hoofdpaginavuurwerkshop.php');
+                                    die;
+                                }
                             }
                         }
 
@@ -32,6 +41,10 @@
                         die;
                     } else {
                         setcookie('Cart', json_encode(array($row)));
+                        if(isset($_GET['cat'])) {
+                            header('location:hoofdpaginavuurwerkshop.php?cat=' . $_GET['cat']);
+                            die;
+                        }
                         header('location:hoofdpaginavuurwerkshop.php');
                         die;
                     }

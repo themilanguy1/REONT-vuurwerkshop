@@ -47,7 +47,7 @@
                 </ul>
             </div>
 
-            <div class="productenlijst col-md-7 text-center">
+            <div class="productenlijst col-md-7">
                 <h4 class="text-center" id="productenlijst-titel">Productenlijst</h4>
                 <hr>
                 <div class="row">
@@ -108,8 +108,7 @@
                     */
                     
                     $result = mysqli_query($db, 'SELECT * FROM vuurwerk');
-                
-                    if ($result->num_rows> 0)
+                            if ($result->num_rows> 0)
                     while($row = mysqli_fetch_assoc($result)) {
                         if(isset($_GET['cat'])) {
                             if ($row['productassortiment'] == $_GET['cat']) {
@@ -118,11 +117,14 @@
                                 echo "<div class='productimagediv'>";
                                 echo "<img class='productimage' src='$row[productafbeelding]' title=$row[productnaam]>" ;
                                 echo "</div>";
-                                echo "<p><b>$row[productnaam]</b>   &euro;$row[productprijs]</p>";
+                                echo "<p><b>$row[productnaam]</b></p>";
                                 echo "<div class='overflowpindakaas'>";
-                                echo "<p>$row[productbeschrijving]</p>";
-                                echo "<a href='producttoevoegen.php?ProdId=$row[productid]'><button class='btn btn-primary'>";
+                                echo "<p class='pindabeschijving'>$row[productbeschrijving]</p>";
+                                echo "<div class='winkelwagenprijsknop'>";
+                                echo "<p class='productprijs'>&euro;$row[productprijs]</p>";
+                                echo "<a href='producttoevoegen.php?ProdId=$row[productid]&cat=$row[productassortiment]'><button class='btn btn-primary producttoevoegenknop'>";
                                 echo "Add +</button></a>";
+                                echo "</div>";
                                 echo "</div>";
                                 echo "</div>";
                                 echo "</div>";   
@@ -134,9 +136,14 @@
                                     echo "<img class='productimage' src='$row[productafbeelding]' title=$row[productnaam]>" ;
                                     echo "<img class='actie' src='http://www.autobedrijf-jenf.nl/site/wp-content/uploads/2016/03/actie2.png'>";
                                     echo "</div>";
-                                    echo "<p><b>$row[productnaam]</b>   &euro;$row[productprijs]</p>";
+                                    echo "<p><b>$row[productnaam]</b></p>";
                                     echo "<div class='overflowpindakaas'>";
-                                    echo "<p>$row[productbeschrijving]</p>";
+                                    echo "<div class='winkelwagenprijsknop'>";
+                                    echo "<p class='pindabeschijving'>$row[productbeschrijving]</p>";
+                                    echo "<p class='productprijs'>&euro;$row[productprijs]</p>";
+                                    echo "<a href='producttoevoegen.php?ProdId=$row[productid]&cat=$row[productactie]'><button class='btn btn-primary producttoevoegenknop'>";
+                                    echo "Add +</button></a>";
+                                    echo "</div>";
                                     echo "</div>";
                                     echo "</div>";
                                     echo "</div>";
@@ -147,9 +154,14 @@
                                 echo "<div class='productimagediv'>";
                                 echo "<img class='productimage' src='$row[productafbeelding]' title=$row[productnaam]>" ;
                                 echo "</div>";
-                                echo "<p><b>$row[productnaam]</b>   &euro;$row[productprijs]</p>";
+                                echo "<p><b>$row[productnaam]</b></p>";
                                 echo "<div class='overflowpindakaas'>";
-                                echo "<p>$row[productbeschrijving]</p>";
+                                echo "<p class='pindabeschijving'>$row[productbeschrijving]</p>";
+                                echo "<div class='winkelwagenprijsknop'>";
+                                echo "<p class='productprijs'>&euro;$row[productprijs]</p>";
+                                echo "<a href='producttoevoegen.php?ProdId=$row[productid]'><button class='btn btn-primary producttoevoegenknop'>";
+                                echo "Add +</button></a>";
+                                echo "</div>";
                                 echo "</div>";
                                 echo "</div>";
                                 echo "</div>";

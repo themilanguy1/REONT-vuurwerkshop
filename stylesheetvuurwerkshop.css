@@ -103,6 +103,25 @@ overflowpindakaas {
     text-overflow: auto;
 }
 
+.winkelwagenprijsknop {
+    float: left;    
+    width: 100%;
+}
+
+.pindabeschijving {
+    height: 90px;
+}
+
+.productprijs {
+    width: fit-content;
+    float: left;
+}
+
+.producttoevoegenknop {
+    float: right;
+    width: 50%;
+}
+
 .winkelwagen {
     display: block;
     padding: 0.5em 0.5em 95px 0.5em;
@@ -115,6 +134,16 @@ overflowpindakaas {
 
 .winkelwagentabel {
     border: 2px solid black;
+    border-radius: 10px 10px 0px 0px;
+}
+
+th {
+    padding: 3px;
+}
+
+td {
+    border: 1px solid black;
+    padding: 3px;
 }
 
 .footer {
