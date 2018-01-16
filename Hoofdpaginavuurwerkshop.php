@@ -35,7 +35,7 @@
         </div>
     </nav>
     <div class="container containerdoos">
-        <div class="row">
+        <div class="row" style="margin: auto;">
             <div class="assortiment col-md-2">
                 <h4 class="text-center" id="assortiment-titel">Categorie</h4>
                 <hr>
@@ -121,9 +121,11 @@
                                 echo "<p><b>$row[productnaam]</b>   &euro;$row[productprijs]</p>";
                                 echo "<div class='overflowpindakaas'>";
                                 echo "<p>$row[productbeschrijving]</p>";
+                                echo "<a href='addproduct.php?ProdId=$row[productid]'><button class='btn btn-primary'>";
+                                echo "Add +</button></a>";
                                 echo "</div>";
                                 echo "</div>";
-                                echo "</div>";
+                                echo "</div>";   
                                 }
                                 if ($row['productactie'] == $_GET['cat']) {
                                     echo "<div class='productdiv col-md-4'>";
@@ -154,8 +156,6 @@
                         }
                     }
                 ?>
-  
-                
             
                 </div>
             </div>
@@ -163,7 +163,28 @@
             <div class="winkelwagen col-md-2 ">
                 <h4 class="text-center" id="winkelwagen-titel">Winkelwagen</h4>
                 <hr>
-                winkelwagen content
+                <div class="winkelwagencontent">
+                <?php
+                     //echo var_dump($Cart);
+                     if(isset($_COOKIE['Cart'])) {
+                        $Cart = json_decode($_COOKIE['Cart'], true);
+                        echo "<table class='winkelwagentabel'><th>Naam</th>";
+                        echo "<th>Prijs</th>";
+                        echo "<th>Assortiment</th>";
+                        foreach($Cart as $Cartitem) {
+                            echo "<tr><td>" .$Cartitem['productnaam']. "</td>";
+                            echo "<td>" .$Cartitem['productprijs']. "</td>";
+                            echo "<td>" .$Cartitem['productassortiment']. "</td></tr>";
+                        } echo "</table>";
+                     }
+                     else {
+                         echo "Geen producten in winkelwagen";
+                     }
+
+                     
+
+                ?>
+                </div>
             </div>
 
         </div>

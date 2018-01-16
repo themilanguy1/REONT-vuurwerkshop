@@ -109,6 +109,14 @@ overflowpindakaas {
     margin: 0.5em;
 }
 
+.winkelwagencontent {
+    font-size: 14 px;
+}
+
+.winkelwagentabel {
+    border: 2px solid black;
+}
+
 .footer {
     display: block;
     padding: 0.5em;
