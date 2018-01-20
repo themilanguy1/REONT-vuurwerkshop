@@ -25,10 +25,10 @@
                                     die;
                                 }
                                 elseif(isset($_GET['cat'])) {
-                                    header('location:hoofdpaginavuurwerkshop.php?cat=' . $_GET['cat']);
+                                    header('location:hoofdpaginavuurwerkshop.php?actie=' . $_GET['cat']);
                                     die;    
                                 } else {
-                                    //header('location:hoofdpaginavuurwerkshop.php');
+                                    header('location:hoofdpaginavuurwerkshop.php');
                                     die;
                                 }
                             }

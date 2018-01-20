@@ -43,7 +43,7 @@
                     <li><a href="http://localhost/18week2/REONT%20vuurwerkshop/hoofdpaginavuurwerkshop.php">Compleet assortiment</a><br></li>
                     <li><a href="http://localhost/18week2/REONT%20vuurwerkshop/hoofdpaginavuurwerkshop.php?cat=knalvuurwerk">Knalvuurwerk</a><br></li>
                     <li><a href="http://localhost/18week2/REONT%20vuurwerkshop/hoofdpaginavuurwerkshop.php?cat=siervuurwerk">Siervuurwerk</a><br></li>
-                    <li><a href="http://localhost/18week2/REONT%20vuurwerkshop/hoofdpaginavuurwerkshop.php?cat=Y">Nieuwjaarsactie</a><br></li>
+                    <li><a href="http://localhost/18week2/REONT%20vuurwerkshop/hoofdpaginavuurwerkshop.php?actie=Y">Nieuwjaarsactie</a><br></li>
                 </ul>
             </div>
 
@@ -129,24 +129,26 @@
                                 echo "</div>";
                                 echo "</div>";   
                                 }
-                                if ($row['productactie'] == $_GET['cat']) {
-                                    echo "<div class='productdiv col-md-4'>";
-                                    echo "<div class='productcontainer'>";
-                                    echo "<div class='productimagediv'>";
-                                    echo "<img class='productimage' src='$row[productafbeelding]' title=$row[productnaam]>" ;
-                                    echo "<img class='actie' src='http://www.autobedrijf-jenf.nl/site/wp-content/uploads/2016/03/actie2.png'>";
-                                    echo "</div>";
-                                    echo "<p><b>$row[productnaam]</b></p>";
-                                    echo "<div class='overflowpindakaas'>";
-                                    echo "<div class='winkelwagenprijsknop'>";
-                                    echo "<p class='pindabeschijving'>$row[productbeschrijving]</p>";
-                                    echo "<p class='productprijs'>&euro;$row[productprijs]</p>";
-                                    echo "<a href='producttoevoegen.php?ProdId=$row[productid]&cat=$row[productactie]'><button class='btn btn-primary producttoevoegenknop'>";
-                                    echo "Add +</button></a>";
-                                    echo "</div>";
-                                    echo "</div>";
-                                    echo "</div>";
-                                    echo "</div>";
+                                if(isset($_GET['actie'])) {
+                                    if ($row['productactie'] == $_GET['actie']) {
+                                        echo "<div class='productdiv col-md-4'>";
+                                        echo "<div class='productcontainer'>";
+                                        echo "<div class='productimagediv'>";
+                                        echo "<img class='productimage' src='$row[productafbeelding]' title=$row[productnaam]>" ;
+                                        echo "<img class='actie' src='http://www.autobedrijf-jenf.nl/site/wp-content/uploads/2016/03/actie2.png'>";
+                                        echo "</div>";
+                                        echo "<p><b>$row[productnaam]</b></p>";
+                                        echo "<div class='overflowpindakaas'>";
+                                        echo "<div class='winkelwagenprijsknop'>";
+                                        echo "<p class='pindabeschijving'>$row[productbeschrijving]</p>";
+                                        echo "<p class='productprijs'>&euro;$row[productprijs]</p>";
+                                        echo "<a href='producttoevoegen.php?ProdId=$row[productid]&actie=$row[productactie]'><button class='btn btn-primary producttoevoegenknop'>";
+                                        echo "Add +</button></a>";
+                                        echo "</div>";
+                                        echo "</div>";
+                                        echo "</div>";
+                                        echo "</div>";
+                                    }
                                 }
                             } else {
                                 echo "<div class='productdiv col-md-4'>";
