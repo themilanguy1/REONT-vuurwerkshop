@@ -5,16 +5,28 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+a {
+    text-decoration: none;
+}
+
 ul {
     padding: 0;
 }
 
+#map {
+    width: 100%;
+    height: 400px;
+    background-color: grey;
+    margin-bottom: 5em;
+    border-radius: 10px;
+}
+
 .navigatie {
     display: block;
-    margin: 1em calc(12%) 1.5em calc(12%);
+    margin: 1em 12% 1.5em 12%;
     padding: 1em;
     border-top: 3px solid lightblue;
-
+    border-radius: 3px;
 }
 
 #home {
@@ -37,7 +49,7 @@ ul {
     font-size: 40px;
 }
 
-#contact {
+#portfolioknop {
     padding: 0.3em;
     border: 1.5px solid rgba(129, 135, 226, 0.568);
     border-radius: 10px;
@@ -48,7 +60,7 @@ ul {
     float: right;
 } 
 
-#contact:hover {
+#portfolioknop:hover {
     background-color: rgba(129, 135, 226, 0.568);
     text-decoration: none;
 }
@@ -91,17 +103,52 @@ overflowpindakaas {
     text-overflow: auto;
 }
 
+.winkelwagenprijsknop {
+    float: left;    
+    width: 100%;
+}
+
+.pindabeschijving {
+    height: 90px;
+}
+
+.productprijs {
+    width: fit-content;
+    float: left;
+}
+
+.producttoevoegenknop {
+    float: right;
+    width: 50%;
+}
+
 .winkelwagen {
     display: block;
     padding: 0.5em 0.5em 95px 0.5em;
     margin: 0.5em;
 }
 
+.winkelwagencontent {
+    font-size: 14 px;
+}
+
+.winkelwagentabel {
+}
+
+th {
+    padding: 3px;
+}
+
+td {
+    padding: 3px;
+}
+
 .footer {
     display: block;
     padding: 0.5em;
-    margin: 1em 12% 1.5em 12%;
+    margin: 1.5em 12% 1em 12%;
     border-bottom: 3px solid lightblue;
+    border-radius: 3px;
 }
 
 #adres {
@@ -110,26 +157,38 @@ overflowpindakaas {
 
 #routebeschrijving {
     float: right;
+    text-decoration: none;
+}
+
+#googlemapsimg {
+    width: 6%;
+    float:right;
 }
 
 @media (max-width: 769px) {
     #home {
         display: block;
         padding: 5px;
-        width: 55px;
-        font-size: 10px;
+        width: 65px;
+        font-size: 12px;
     }
-    #contact {
+    #portfolioknop {
         display: block;
         padding: 5px;
-        width: 55px;
-        font-size: 10px;
+        width: 65px;
+        font-size: 12px;
     }
     .assortiment {
         padding: 0.5em;
     }
     .footer {
         font-size: 12px;
+    }
+    #googlemapsimg {
+        width: 25%;
+    }
+    #routebeschrijving {
+        width: 130px;
     }
 }
 
