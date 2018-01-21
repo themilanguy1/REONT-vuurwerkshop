@@ -133,8 +133,6 @@ overflowpindakaas {
 }
 
 .winkelwagentabel {
-    border: 2px solid black;
-    border-radius: 10px 10px 0px 0px;
 }
 
 th {
@@ -142,7 +140,6 @@ th {
 }
 
 td {
-    border: 1px solid black;
     padding: 3px;
 }
 

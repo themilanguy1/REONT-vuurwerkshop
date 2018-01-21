@@ -29,13 +29,13 @@
 </head>
 <body>
     <nav class="navigatie text-center">
-            <a id="home" href="http://localhost/18week2/REONT%20vuurwerkshop/hoofdpaginavuurwerkshop.php">Home</a>
+            <a id="home" href="https://www.ictacademie.info/milangupta/18week2/hoofdpaginavuurwerkshop.php">Home</a>
             <a id="portfolioknop" href="https://www.ictacademie.info/milangupta/">Portfolio</a>
             <h2 class="text-center" id="titel">  Vuurwerkshop</h2>
         </div>
     </nav>
     <div class="container containerdoos">
-        <div class="row" style="margin: auto;">
+        <div class="row">
             <div class="assortiment col-md-2">
                 <h4 class="text-center" id="assortiment-titel">Categorie</h4>
                 <hr>
@@ -43,11 +43,11 @@
                     <li><a href="http://localhost/18week2/REONT%20vuurwerkshop/hoofdpaginavuurwerkshop.php">Compleet assortiment</a><br></li>
                     <li><a href="http://localhost/18week2/REONT%20vuurwerkshop/hoofdpaginavuurwerkshop.php?cat=knalvuurwerk">Knalvuurwerk</a><br></li>
                     <li><a href="http://localhost/18week2/REONT%20vuurwerkshop/hoofdpaginavuurwerkshop.php?cat=siervuurwerk">Siervuurwerk</a><br></li>
-                    <li><a href="http://localhost/18week2/REONT%20vuurwerkshop/hoofdpaginavuurwerkshop.php?actie=Y">Nieuwjaarsactie</a><br></li>
+                    <li><a href="http://localhost/18week2/REONT%20vuurwerkshop/hoofdpaginavuurwerkshop.php?cat=Y">Nieuwjaarsactie</a><br></li>
                 </ul>
             </div>
 
-            <div class="productenlijst col-md-7">
+            <div class="productenlijst col-md-7 text-center">
                 <h4 class="text-center" id="productenlijst-titel">Productenlijst</h4>
                 <hr>
                 <div class="row">
@@ -62,53 +62,9 @@
                         die("Connection failed: " . $db->connect_error);
                     } 
                     
-                    /*$result = mysqli_query($db, 'SELECT productid, productnaam FROM vuurwerk');
-
-
-                    //PROBEERSEL
-                    if ($result->num_rows> 0) {
-                        echo "<table><tr><th>id</th><th>naam</th></tr>";
-                        while($row = mysqli_fetch_assoc($result)) {
-                                echo "<tr><td>" . $row["productid"] . "</td><td>" . $row["productnaam"] . "</td></tr>";
-                            }
-                            echo "</table>";
-                    } 
-                    */
-
-
-                    /*
-                    $sql1 = "SELECT * FROM vuurwerk";
-
                     $result = mysqli_query($db, 'SELECT * FROM vuurwerk');
-                    if($result=$db->query($sql)) {
-                        if($row = $result->fetch_array()) {
-                            //var_dump($rows);
-                            echo $rows['productid']. " " . $rows['productnaam']. " ".$rows['productprijs'];
-                            echo "<br>";
-                        }
-                    }
-
-
-                    //$sql2 = "SELECT productnaam FROM vuurwerk";
-                    
-                    //$result1=mysqli_query($db,$sql1);
-                    //$result2=mysqli_query($db,$sql2);
-
-                    //$array=mysqli_fetch_array(
-                   //     array($result1,MYSQLI_ASSOC),
-                   //     array($result2,MYSQLI_ASSOC)
-                   // );
-
-                   //$result1=mysqli_query($db,$sql1);
-                   //$row=mysqli_fetch_array($result1,MYSQLI_NUM);
-                   // echo $row[0];
-
-                    //$row=mysqli_fetch_array($result2,MYSQLI_NUM);
-                    //echo "$row[productnaam] $row[productafbeelding]";
-                    */
-                    
-                    $result = mysqli_query($db, 'SELECT * FROM vuurwerk');
-                            if ($result->num_rows> 0)
+                
+                    if ($result->num_rows> 0)
                     while($row = mysqli_fetch_assoc($result)) {
                         if(isset($_GET['cat'])) {
                             if ($row['productassortiment'] == $_GET['cat']) {
@@ -129,9 +85,8 @@
                                 echo "</div>";
                                 echo "</div>";   
                                 }
-                                if(isset($_GET['actie'])) {
-                                    if ($row['productactie'] == $_GET['actie']) {
-                                        echo "<div class='productdiv col-md-4'>";
+                                if ($row['productactie'] == $_GET['cat']) {
+                                    echo "<div class='productdiv col-md-4'>";
                                         echo "<div class='productcontainer'>";
                                         echo "<div class='productimagediv'>";
                                         echo "<img class='productimage' src='$row[productafbeelding]' title=$row[productnaam]>" ;
@@ -148,7 +103,6 @@
                                         echo "</div>";
                                         echo "</div>";
                                         echo "</div>";
-                                    }
                                 }
                             } else {
                                 echo "<div class='productdiv col-md-4'>";
@@ -170,6 +124,8 @@
                         }
                     }
                 ?>
+  
+                
             
                 </div>
             </div>
